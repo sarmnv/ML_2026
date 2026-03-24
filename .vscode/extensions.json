@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.pylance",
+    "charliermarsh.ruff",
+    "astral-sh.ty",
+    "ms-toolsai.jupyter"
+  ]
+}
