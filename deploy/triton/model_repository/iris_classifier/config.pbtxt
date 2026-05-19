@@ -1,0 +1,37 @@
+name: "iris_classifier"
+backend: "python"
+
+max_batch_size: 64
+
+input [
+  {
+    name: "input"
+    data_type: TYPE_FP32
+    dims: [4]
+  },
+  {
+    name: "model_name"
+    data_type: TYPE_STRING
+    dims: [1]
+  }
+]
+
+output [
+  {
+    name: "class_id"
+    data_type: TYPE_INT64
+    dims: [1]
+  },
+  {
+    name: "class_name"
+    data_type: TYPE_STRING
+    dims: [1]
+  },
+  {
+    name: "probabilities"
+    data_type: TYPE_FP32
+    dims: [3]
+  }
+]
+
+instance_group [{ kind: KIND_CPU }]
